@@ -4,13 +4,15 @@
 
 using namespace std;
 
-double computeArea(Point &a, Point &b, Point &c);
+double computeArea(const Point &a, const Point &b, const Point &c);
 
 int main() {
 
+	// Declare the three points and its coordinates
 	Point p1, p2, p3;
 	double x, y, z;
 
+	// Read in data and assign values the points
 	cout << endl << "This program calculates the area of the triangle" << endl
 			 <<	"formed by three points in 3D space." << endl << endl;
 
@@ -35,6 +37,7 @@ int main() {
 	p3.setZ(z);
 	cout << endl;
 
+	//Calculate and print the result
 	cout << "Point 1: " << p1.getX() << ' ' << p1.getY() << ' ' << p1.getZ() << endl;
 	cout << "Point 2: " << p2.getX() << ' ' << p2.getY() << ' ' << p2.getZ() << endl;
 	cout << "Point 3: " << p3.getX() << ' ' << p3.getY() << ' ' << p3.getZ() << endl;
@@ -43,7 +46,7 @@ int main() {
 	return 0;
 }
 
-double computeArea(Point &a, Point &b, Point &c) {
+double computeArea(const Point &a, const Point &b, const Point &c) {
 
 	double s1 = a.distanceTo(b);
 	double s2 = a.distanceTo(c);

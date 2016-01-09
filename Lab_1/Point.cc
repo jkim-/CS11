@@ -37,21 +37,21 @@ void Point::setZ(double val) {
 }
 
 // Accessors:
-double Point::getX() {
+double Point::getX() const {
   return x_coord;
 }
 
-double Point::getY() {
+double Point::getY() const {
   return y_coord;
 }
 
-double Point::getZ() {
+double Point::getZ() const {
   return z_coord;
 }
 
 // Member functions
-double Point::distanceTo(Point &pTo) {
+double Point::distanceTo(const Point &pTo) const {
 	return sqrt((pTo.getX() - x_coord) * (pTo.getX() - x_coord) +
-							(pTo.getY() - y_coord) * (pTo.getY() - y_coord) +
-							(pTo.getZ() - z_coord) * (pTo.getZ() - z_coord));
+              (pTo.getY() - y_coord) * (pTo.getY() - y_coord) +
+	            (pTo.getZ() - z_coord) * (pTo.getZ() - z_coord));
 }

@@ -21,10 +21,10 @@ public:
   void setZ(double val);
 
   // Accessor methods
-  double getX();
-  double getY();
-  double getZ();
+  double getX() const;
+  double getY() const;
+  double getZ() const;
 
   // Member functions
-  double distanceTo(Point &pTo);
+  double distanceTo(const Point &pTo) const;
 };
